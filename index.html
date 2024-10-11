@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+    </style>
+</head>
+<body class="bg-slate-300 h-screen">
+    <!-- Fixed Navbar -->
+    <nav class="bg-slate-100 shadow-lg fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center p-6">
+            <div class="text-2xl font-bold">MY PORTFOLIO</div>
+    
+            <!-- Hamburger Menu -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-gray-700 hover:text-black focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+    
+            <!-- Menu Items for Desktop -->
+            <div class="hidden md:flex space-x-8 px-40">
+                <a href="#home" class="text-gray-700 hover:text-black">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-black">About me</a>
+                <a href="#edu" class="text-gray-700 hover:text-black">Education</a>
+                <a href="#skill" class="text-gray-700 hover:text-black">Skills</a>
+                <a href="#proj" class="text-gray-700 hover:text-black">Projects</a>
+                <a href="#con" class="text-gray-700 hover:text-black">Contact</a>
+            </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden">
+            <div class="flex flex-col p-4 space-y-2 bg-white border-t border-gray-200">
+                <a href="#home" class="text-gray-700 hover:text-black">Home</a>
+                <a href="#about" class="text-gray-700 hover:text-black">About me</a>
+                <a href="#edu" class="text-gray-700 hover:text-black">Education</a>
+                <a href="#skill" class="text-gray-700 hover:text-black">Skills</a>
+                <a href="#proj" class="text-gray-700 hover:text-black">Projects</a>
+                <a href="#con" class="text-gray-700 hover:text-black">Contact</a>
+            </div>
+        </div>
+    </nav>
+    
+    <!-- Main Section with padding to avoid being hidden under the navbar -->
+    <div class="pt-24 grid grid-cols-2 gap-4 place-content-around md:px-24 py-16 md:space-y-0" id="home">
+        <div class="max-w-lg space-y-4 text-center md:text-left p-12 bg-slate-200 rounded-3xl shadow-xl shadow-gray-500 hover:shadow-gray-700">
+            <p class="text-xl text-gray-700">Hi I am</p>
+            <h1 class="text-5xl font-bold text-orange-500">Lathika Priya</h1>
+            <h2 class="text-4xl font-bold text-gray-900">2nd Year CS Student</h2>
+
+            <a href="https://github.com/Lathika-Priya" class="p-20">
+                <div class="flex"><img src="github.png" target="_blank" class="h-8 pr-4 hover:underline" >Lathika-Priya</div>
+            </a>
+            <div class="flex"><img src="location.png" target="_blank" class="h-8 pr-4 hover:underline" >Vizianagaram, Andhra Pradesh</div>
+
+        </div>
+        
+        <div class="flex justify-self-center lg:pr-40 md:block">
+            <img src="me.jpg" alt="Profile Image" class="rounded-full w-80 h-100 md:w-80 md:h-100 object-cover shadow-xl shadow-gray-500 hover:shadow-gray-700">
+        </div>
+
+    </div>
+
+    <div class="text-gray-800" id="about">
+        <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+            <section class="mt-12">
+                <h3 class="font-bold text-2xl mb-6">ABOUT ME</h3>
+                <p>
+                    I am a BTech student at IIT Indore, pursuing a degree in Computer Science and Engineering. I have developed the frontend for the IITISOC project, where I gained valuable experience in user interface design and implementation. Currently, I am focused on backend development while working on a DBMS project that integrates web development. My passion lies in understanding how different technologies work together, and I’m excited to learn more through hands-on experiences and collaborative projects. 
+                </p>
+            </section>
+            <!-- Expertise Section -->
+            <section class="mt-12" id="skill">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">My <span class="text-orange-500">Skills</span></h3>
+                <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <!-- Card 1 -->
+                    <div class="bg-white shadow-xl shadow-gray-500 hover:shadow-gray-700 rounded-lg p-6 border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Web Development (Front End)</h4>
+                        <p class="text-gray-600">Create Websites using HTML,CSS,JS</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="bg-white shadow-xl shadow-gray-500 hover:shadow-gray-700 rounded-lg p-6 border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Competitive Programming</h4>
+                        <p class="text-gray-600">Solving questions using CPP.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="bg-white shadow-xl shadow-gray-500 hover:shadow-gray-700 rounded-lg p-6 border border-gray-200">
+                        <h4 class="text-lg font-bold text-gray-800 mb-2">Database (MongoDB) </h4>
+                        <p class="text-gray-600">Databases for storing data .</p>
+                    </div>
+                </div>
+            </section>
+    
+            <!-- Bottom Section: Hire CTA -->
+            <!-- <section class="mt-12 flex justify-center">
+                <div class="bg-gray-100 rounded-lg p-6 text-center shadow-xl max-w-lg">
+                    <p class="text-gray-800 text-lg">Zuhaira is available for hire</p>
+                    <button class="bg-orange-500 text-white font-semibold py-2 px-4 mt-4 rounded-md shadow-xl hover:bg-orange-600">Hire Zuhaira</button>
+                </div>
+            </section> -->
+        </div>
+    </div>
+    <div class="p-20" id="edu">
+        <div class="bg-gray-700 text-gray-100  rounded-3xl">
+            <div class="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <!-- Resume Header -->
+               
+                <!-- Education Section -->
+                <section class="mb-12">
+                    <h2 class="text-2xl font-semibold text-yellow-500 mb-6">Education</h2>
+                    <div class="space-y-6">
+                        <!-- Education Entry 1 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-yellow-500 h-4 w-4 rounded-full mt-1"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">Indian Institution Of Technology Indore</h3>
+                                <p class="text-sm text-gray-400">2023 - 2027</p>
+                                <p class="text-gray-300">Pursuing BTech in computer science and engineering from 2023 - 2027</p>
+                            </div>
+                        </div>
+
+                        <!-- Education Entry 2 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-yellow-500 h-4 w-4 rounded-full mt-1"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">Tirumala Jr College</h3>
+                                <p class="text-sm text-gray-400">2021 - 2023</p>
+                            </div>
+                        </div>
+
+                        <!-- Education Entry 3 -->
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0">
+                                <div class="bg-yellow-300 h-4 w-4 rounded-full mt-1"></div>
+                            </div>
+                            <div class="ml-4">
+                                <h3 class="text-lg font-semibold">PSR School</h3>
+                                <p class="text-sm text-gray-400">2011 - 2021</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                
+            </div>
+        </div>
+    </div>
+    <div class="text-gray-800">
+        <!-- Header Section -->
+        <div class="flex mx-auto py-12 px-4 sm:px-6 lg:px-8 justify-center" id="proj">
+            <section>
+                <h4 class="flex font-bold text-orange-500 text-3xl mb-6 justify-center">Project</h4>
+                <div class="bg-white shadow-xl shadow-gray-500 hover:shadow-gray-700 rounded-lg p-6 border border-gray-200">
+                    <p class="font-bold text-xl mb-4">CP Practice Portal</p>
+                    <a href="https://github.com/DeveshLokare/CP_Practice_Portal">
+                        <img src="cp.png" class="rounded-lg mb-2 w-full object-cover" alt="CP Practice Portal Image">
+                    </a>
+                    <p class="text-gray-600">A platform displaying programming questions from various websites.</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <footer class="flex justify-center bg-black text-white py-8">
+        <div class="max-w-7xl mx-auto px-4" id="con">
+            <h3 class="text-2xl font-bold mb-4">Contact Me</h3>
+            <div class="flex flex-col sm:flex-row">
+                <div class="mb-4 sm:mb-0 sm:mr-6">
+                    <p class="text-gray-400">
+                        <img src="mail.png" class="h-8 w-8">
+                        <a href="mailto:lathikapriya2006@gmail.com" class="hover:underline">lathikapriya2006@gmail.com</a>
+                    </p>
+                </div>
+                <div class="mb-4 sm:mb-0 sm:mr-6">
+                    <p class="text-gray-400">
+                        <img src="linkedin.png" class="h-8 w-10">
+                        <a href="https://www.linkedin.com/in/lathika-priya-bba45130a/" target="_blank" class="hover:underline">Lathika Priya</a>
+                    </p>
+                </div>
+                <div class="mb-4 sm:mb-0 sm:mr-6 mr-6">
+                    <p class="text-gray-400">
+                        <img src="contact.png" class="h-8 w-10">
+                        <a >+91 6300861632</a>
+                    </p>
+                </div>
+
+                <div class="mb-4 sm:mb-0 sm:mr-6 mr-6">
+                    <p class="text-gray-400">
+                        <img src="insta.png" class="h-10 w-10">
+                        <a href="https://www.instagram.com/lathika_priya__/" target="_blank" class="hover:underline">lathika_priya__</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+<script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+    });
+</script>
+
+</html>
